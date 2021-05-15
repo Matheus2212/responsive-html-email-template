@@ -17,15 +17,15 @@
         $mail->isSMTP();
         $mail->Host = "smtp.gmail.com";
         $mail->SMTPAuth = true;
-        $mail->Username = "devmagesystems@gmail.com";
-        $mail->Password = 'MFMs_1487';
+        $mail->Username = "sender@email.com";
+        $mail->Password = 'email-password';
         $mail->Port = 465; //587
         $mail->SMTPSecure = "ssl"; //tls
 
         //Email Settings
         $mail->isHTML(true);
         $mail->setFrom($email, $name);
-        $mail->addAddress("your-email");
+        $mail->addAddress("receiver@email.com");
         $mail->Subject = $subject;
         $mail->Body = file_get_contents("email-layout-template-mode.html");
 
